@@ -1,0 +1,4 @@
+language: objective-c
+install:
+- cd UIViewDraggableDemo
+script: xctool -project UIViewDraggableDemo.xcodeproj -scheme 'UIViewDraggableDemo' -configuration Release -sdk iphonesimulator7.0 -arch i386 build
