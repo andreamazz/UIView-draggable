@@ -26,7 +26,8 @@
 	[self adjustAnchorPointForGestureRecognizer:sender];
 	
 	CGPoint translation = [sender translationInView:[self superview]];
-	[self setCenter:CGPointMake([self center].x + translation.x, [self center].y + translation.y)];
+	self.transform = CGAffineTransformMakeTranslation([self center].x + translation.x, [self center].y + translation.y);
+//	[self setCenter:CGPointMake([self center].x + translation.x, [self center].y + translation.y)];
 	
 	[sender setTranslation:(CGPoint){0, 0} inView:[self superview]];
 }

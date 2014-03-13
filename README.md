@@ -3,6 +3,7 @@ UIView+draggable
 
 [![Build Status](https://travis-ci.org/andreamazz/UIView-draggable.png)](https://travis-ci.org/andreamazz/UIView-draggable)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UIView+draggable/badge.png)](http://cocoapods.org/?q=summary%3Auiview%20name%3Adraggable%2A)
+[![Analytics](https://ga-beacon.appspot.com/UA-42282237-8/UIView-draggable/README)](https://github.com/igrigorik/ga-beacon)
 
 UIView category that adds dragging capabilities
 
