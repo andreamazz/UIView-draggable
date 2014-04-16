@@ -9,7 +9,7 @@ UIView category that adds dragging capabilities
 
 Screenshot
 --------------------
-![UIVIew+draggable](http://www.eflatgames.com/github/UIView-draggable.gif)
+![UIVIew+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/screenshot.gif)
 
 Setup with Cocoapods
 --------------------
