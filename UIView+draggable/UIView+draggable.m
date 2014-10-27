@@ -43,9 +43,38 @@
 	[self adjustAnchorPointForGestureRecognizer:sender];
 	
 	CGPoint translation = [sender translationInView:[self superview]];
-	[self setCenter:CGPointMake([self center].x + translation.x, [self center].y + translation.y)];
-	
-	[sender setTranslation:(CGPoint){0, 0} inView:[self superview]];
+    
+    CGFloat newXOrigin = CGRectGetMinX(self.frame) + translation.x;
+    CGFloat newYOrigin = CGRectGetMinY(self.frame) + translation.y;
+    
+    CGRect cagingArea = self.cagingArea;
+
+    CGFloat cagingAreaOriginX = CGRectGetMinX(cagingArea);
+    CGFloat cagingAreaOriginY = CGRectGetMinY(cagingArea);
+    
+    CGFloat cagingAreaRightSide = cagingAreaOriginX + CGRectGetWidth(cagingArea);
+    CGFloat cagingAreaBottomSide = cagingAreaOriginY + CGRectGetHeight(cagingArea);
+    
+    if (!CGRectEqualToRect(cagingArea, CGRectZero)) {
+        
+        // Check to make sure the view is still within the caging area
+        if (newXOrigin <= cagingAreaOriginX ||
+            newYOrigin <= cagingAreaOriginY ||
+            newXOrigin + CGRectGetWidth(self.frame) >= cagingAreaRightSide ||
+            newYOrigin + CGRectGetHeight(self.frame) >= cagingAreaBottomSide) {
+            
+            // Don't move
+            newXOrigin = CGRectGetMinX(self.frame);
+            newYOrigin = CGRectGetMinY(self.frame);
+        }
+    }
+    
+    [self setFrame:CGRectMake(newXOrigin,
+                              newYOrigin,
+                              CGRectGetWidth(self.frame),
+                              CGRectGetHeight(self.frame))];
+    
+    [sender setTranslation:(CGPoint){0, 0} inView:[self superview]];
 }
 
 - (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
