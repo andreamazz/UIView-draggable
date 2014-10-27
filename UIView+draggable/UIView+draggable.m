@@ -21,6 +21,23 @@
 	return objc_getAssociatedObject(self, @selector(panGesture));
 }
 
+- (void)setCagingArea:(CGRect)cagingArea
+{
+    NSValue *cagingAreaValue = [NSValue valueWithCGRect:cagingArea];
+    objc_setAssociatedObject(self,
+                             @selector(cagingArea),
+                             cagingAreaValue,
+                             OBJC_ASSOCIATION_RETAIN);
+}
+
+- (CGRect)cagingArea
+{
+    NSValue *cagingAreaValue = objc_getAssociatedObject(self,
+                                                        @selector(cagingArea));
+    
+    return [cagingAreaValue CGRectValue];
+}
+
 - (void)handlePan:(UIPanGestureRecognizer*)sender
 {
 	[self adjustAnchorPointForGestureRecognizer:sender];

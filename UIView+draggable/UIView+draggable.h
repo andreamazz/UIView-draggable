@@ -19,6 +19,16 @@
  */
 @property (nonatomic) UIPanGestureRecognizer *panGesture;
 
+/** 
+ A caging area such that the view can not be moved outside
+ of this frame.
+ 
+ Optional. If not set, defaults to CGRectZero, which will result
+ in no caging behavior.
+ */
+@property (nonatomic) CGRect cagingArea;
+ 
+
 /**-----------------------------------------------------------------------------
  * @name UIView+draggable Methods
  * -----------------------------------------------------------------------------
