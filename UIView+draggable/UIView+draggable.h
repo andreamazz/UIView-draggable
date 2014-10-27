@@ -23,6 +23,9 @@
  A caging area such that the view can not be moved outside
  of this frame.
  
+ If the view is not within @c cagingArea, then this does nothing (ie. if
+ the bounds of the view extend the bounds of @c cagingArea).
+ 
  Optional. If not set, defaults to CGRectZero, which will result
  in no caging behavior.
  */

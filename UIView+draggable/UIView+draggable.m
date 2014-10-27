@@ -23,11 +23,13 @@
 
 - (void)setCagingArea:(CGRect)cagingArea
 {
-    NSValue *cagingAreaValue = [NSValue valueWithCGRect:cagingArea];
-    objc_setAssociatedObject(self,
-                             @selector(cagingArea),
-                             cagingAreaValue,
-                             OBJC_ASSOCIATION_RETAIN);
+    if (CGRectContainsRect(cagingArea, self.frame)) {
+        NSValue *cagingAreaValue = [NSValue valueWithCGRect:cagingArea];
+        objc_setAssociatedObject(self,
+                                 @selector(cagingArea),
+                                 cagingAreaValue,
+                                 OBJC_ASSOCIATION_RETAIN);
+    }
 }
 
 - (CGRect)cagingArea
