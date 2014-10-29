@@ -34,5 +34,17 @@
 		[obj setDraggable:sender.isOn];
 	}];
 }
+- (IBAction)didToggleCagingAreaSwitch:(UISwitch *)sender
+{
+    CGRect cagingArea = CGRectZero;
+    
+    if ([sender isOn]) {
+        cagingArea = self.view.frame;
+    }
+    
+    [self.draggableViews enumerateObjectsUsingBlock:^(UIView* obj, NSUInteger idx, BOOL *stop) {
+        obj.cagingArea = cagingArea;
+    }];
+}
 
 @end
