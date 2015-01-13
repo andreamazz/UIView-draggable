@@ -31,6 +31,9 @@
  in no caging behavior.
  */
 @property (nonatomic) CGRect cagingArea;
+
+@property (nonatomic) BOOL shouldMoveAlongY;
+@property (nonatomic) BOOL shouldMoveAlongX;
  
 
 /**-----------------------------------------------------------------------------
