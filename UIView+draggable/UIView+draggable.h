@@ -32,9 +32,15 @@
  */
 @property (nonatomic) CGRect cagingArea;
 
-@property (nonatomic) BOOL shouldMoveAlongY;
+/**
+ Restricts the movement along the X axis
+ */
 @property (nonatomic) BOOL shouldMoveAlongX;
- 
+
+/** 
+ Restricts the movement along the Y axis
+ */
+@property (nonatomic) BOOL shouldMoveAlongY;
 
 /**-----------------------------------------------------------------------------
  * @name UIView+draggable Methods
