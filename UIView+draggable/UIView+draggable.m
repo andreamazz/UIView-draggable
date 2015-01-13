@@ -41,14 +41,52 @@
     return [cagingAreaValue CGRectValue];
 }
 
+- (void)setShouldMoveAlongY:(BOOL)newShould
+{
+    NSNumber *shouldMoveAlongYBool = [NSNumber numberWithBool:newShould];
+    
+    objc_setAssociatedObject(self,
+                             @selector(shouldMoveAlongY),
+                             shouldMoveAlongYBool,
+                             OBJC_ASSOCIATION_RETAIN
+                             );
+}
+
+- (BOOL)shouldMoveAlongY
+{
+    NSNumber *moveAlongY = objc_getAssociatedObject(self,
+                                                    @selector(shouldMoveAlongY));
+    
+    return (moveAlongY) ? [moveAlongY boolValue] : YES;
+}
+
+- (void)setShouldMoveAlongX:(BOOL)newShould
+{
+    NSNumber *shouldMoveAlongXBool = [NSNumber numberWithBool:newShould];
+    
+    objc_setAssociatedObject(self,
+                             @selector(shouldMoveAlongX),
+                             shouldMoveAlongXBool,
+                             OBJC_ASSOCIATION_RETAIN
+                             );
+}
+
+- (BOOL)shouldMoveAlongX
+{
+    NSNumber *moveAlongX = objc_getAssociatedObject(self,
+                                                    @selector(shouldMoveAlongX));
+    
+    return (moveAlongX) ? [moveAlongX boolValue] : YES;
+}
+
 - (void)handlePan:(UIPanGestureRecognizer*)sender
 {
 	[self adjustAnchorPointForGestureRecognizer:sender];
 	
 	CGPoint translation = [sender translationInView:[self superview]];
     
-    CGFloat newXOrigin = CGRectGetMinX(self.frame) + translation.x;
-    CGFloat newYOrigin = CGRectGetMinY(self.frame) + translation.y;
+    CGFloat newXOrigin = CGRectGetMinX(self.frame) + (([self shouldMoveAlongX]) ? translation.x : 0);
+    CGFloat newYOrigin = CGRectGetMinY(self.frame) + (([self shouldMoveAlongY]) ? translation.y : 0);
     
     CGRect cagingArea = self.cagingArea;
 
