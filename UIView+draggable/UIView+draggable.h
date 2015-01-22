@@ -32,10 +32,26 @@
  */
 @property (nonatomic) CGRect cagingArea;
 
+
+/**
+ Restricts the movement along the Y axis
+ */
 @property (nonatomic) BOOL shouldMoveAlongY;
+
+/**
+ Restricts the movement along the X axis
+ */
 @property (nonatomic) BOOL shouldMoveAlongX;
 
+
+/**
+ Notifies when dragging started
+ */
 @property (nonatomic, copy) void (^draggingStartedBlock)();
+
+/**
+ Notifies when dragging ended
+ */
 @property (nonatomic, copy) void (^draggingEndedBlock)();
 
 
