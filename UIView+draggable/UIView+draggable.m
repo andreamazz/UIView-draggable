@@ -13,12 +13,12 @@
 
 - (void)setPanGesture:(UIPanGestureRecognizer*)panGesture
 {
-	objc_setAssociatedObject(self, @selector(panGesture), panGesture, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, @selector(panGesture), panGesture, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (UIPanGestureRecognizer*)panGesture
 {
-	return objc_getAssociatedObject(self, @selector(panGesture));
+    return objc_getAssociatedObject(self, @selector(panGesture));
 }
 
 - (void)setCagingArea:(CGRect)cagingArea
@@ -79,17 +79,53 @@
     return (moveAlongX) ? [moveAlongX boolValue] : YES;
 }
 
+-(void)setDraggingStartedBlock:(void (^)())draggingStartedBlock
+{
+    objc_setAssociatedObject(self,
+                             @selector(draggingStartedBlock),
+                             draggingStartedBlock,
+                             OBJC_ASSOCIATION_RETAIN);
+}
+
+-(void (^)())draggingStartedBlock
+{
+    return objc_getAssociatedObject(self,
+                                    @selector(draggingStartedBlock));
+}
+
+-(void)setDraggingEndedBlock:(void (^)())draggingEndedBlock
+{
+    objc_setAssociatedObject(self,
+                             @selector(draggingEndedBlock),
+                             draggingEndedBlock,
+                             OBJC_ASSOCIATION_RETAIN);
+}
+
+-(void (^)())draggingEndedBlock
+{
+    return objc_getAssociatedObject(self,
+                                    @selector(draggingEndedBlock));
+}
+
 - (void)handlePan:(UIPanGestureRecognizer*)sender
 {
-	[self adjustAnchorPointForGestureRecognizer:sender];
-	
-	CGPoint translation = [sender translationInView:[self superview]];
+    [self adjustAnchorPointForGestureRecognizer:sender];
+    
+    if (sender.state == UIGestureRecognizerStateBegan && self.draggingStartedBlock) {
+        self.draggingStartedBlock();
+    }
+    
+    if (sender.state == UIGestureRecognizerStateEnded && self.draggingEndedBlock) {
+        self.draggingEndedBlock();
+    }
+    
+    CGPoint translation = [sender translationInView:[self superview]];
     
     CGFloat newXOrigin = CGRectGetMinX(self.frame) + (([self shouldMoveAlongX]) ? translation.x : 0);
     CGFloat newYOrigin = CGRectGetMinY(self.frame) + (([self shouldMoveAlongY]) ? translation.y : 0);
     
     CGRect cagingArea = self.cagingArea;
-
+    
     CGFloat cagingAreaOriginX = CGRectGetMinX(cagingArea);
     CGFloat cagingAreaOriginY = CGRectGetMinY(cagingArea);
     
@@ -132,16 +168,16 @@
 
 - (void)setDraggable:(BOOL)draggable
 {
-	[self.panGesture setEnabled:draggable];
+    [self.panGesture setEnabled:draggable];
 }
 
 - (void)enableDragging
 {
-	self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-	[self.panGesture setMaximumNumberOfTouches:1];
-	[self.panGesture setMinimumNumberOfTouches:1];
-	[self.panGesture setCancelsTouchesInView:NO];
-	[self addGestureRecognizer:self.panGesture];
+    self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [self.panGesture setMaximumNumberOfTouches:1];
+    [self.panGesture setMinimumNumberOfTouches:1];
+    [self.panGesture setCancelsTouchesInView:NO];
+    [self addGestureRecognizer:self.panGesture];
 }
 
 @end

@@ -19,7 +19,7 @@
  */
 @property (nonatomic) UIPanGestureRecognizer *panGesture;
 
-/** 
+/**
  A caging area such that the view can not be moved outside
  of this frame.
  
@@ -32,15 +32,12 @@
  */
 @property (nonatomic) CGRect cagingArea;
 
-/**
- Restricts the movement along the X axis
- */
+@property (nonatomic) BOOL shouldMoveAlongY;
 @property (nonatomic) BOOL shouldMoveAlongX;
 
-/** 
- Restricts the movement along the Y axis
- */
-@property (nonatomic) BOOL shouldMoveAlongY;
+@property (nonatomic, copy) void (^draggingStartedBlock)();
+@property (nonatomic, copy) void (^draggingEndedBlock)();
+
 
 /**-----------------------------------------------------------------------------
  * @name UIView+draggable Methods
