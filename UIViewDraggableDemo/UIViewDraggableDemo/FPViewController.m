@@ -25,6 +25,7 @@
 	[self.draggableViews enumerateObjectsUsingBlock:^(UIView* obj, NSUInteger idx, BOOL *stop) {
 		[obj enableDragging];
 		[obj.layer setCornerRadius:4];
+        //[obj setDraggingArea:CGRectMake(0, 0, 100, 100)];
 	}];
 }
 
