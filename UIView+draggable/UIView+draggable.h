@@ -34,6 +34,16 @@
 
 
 /**
+ An area on the view tap and hold where you can drag the view.
+ 
+ From another part of the view it cannot be dragging
+ 
+ Optional. If not set, defaults is self.view.
+ */
+@property (nonatomic) CGRect draggingArea;
+
+
+/**
  Restricts the movement along the X axis
  */
 @property (nonatomic) BOOL shouldMoveAlongX;

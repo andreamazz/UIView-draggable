@@ -41,6 +41,26 @@
     return [cagingAreaValue CGRectValue];
 }
 
+- (void)setDraggingArea:(CGRect)draggingArea
+{
+    CGRect relativeFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    if (CGRectContainsRect(relativeFrame, draggingArea)) {
+        NSValue *draggingAreaValue = [NSValue valueWithCGRect:draggingArea];
+        objc_setAssociatedObject(self,
+                                 @selector(draggingArea),
+                                 draggingAreaValue,
+                                 OBJC_ASSOCIATION_RETAIN);
+    }
+}
+
+- (CGRect)draggingArea
+{
+    NSValue *draggingAreaValue = objc_getAssociatedObject(self,
+                                                          @selector(draggingArea));
+    
+    return [draggingAreaValue CGRectValue];
+}
+
 - (void)setShouldMoveAlongY:(BOOL)newShould
 {
     NSNumber *shouldMoveAlongYBool = [NSNumber numberWithBool:newShould];
@@ -109,6 +129,12 @@
 
 - (void)handlePan:(UIPanGestureRecognizer*)sender
 {
+    // Check to make you drag from dragging area
+    CGPoint locationInView = [sender locationInView:self];
+    if (!CGRectContainsPoint(self.draggingArea, locationInView)) {
+        return;
+    }
+    
     [self adjustAnchorPointForGestureRecognizer:sender];
     
     if (sender.state == UIGestureRecognizerStateBegan && self.draggingStartedBlock) {
@@ -177,6 +203,7 @@
     [self.panGesture setMaximumNumberOfTouches:1];
     [self.panGesture setMinimumNumberOfTouches:1];
     [self.panGesture setCancelsTouchesInView:NO];
+    [self setDraggingArea:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self addGestureRecognizer:self.panGesture];
 }
 
