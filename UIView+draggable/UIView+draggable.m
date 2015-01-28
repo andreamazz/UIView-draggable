@@ -26,112 +26,80 @@
     if (CGRectEqualToRect(cagingArea, CGRectZero) ||
         CGRectContainsRect(cagingArea, self.frame)) {
         NSValue *cagingAreaValue = [NSValue valueWithCGRect:cagingArea];
-        objc_setAssociatedObject(self,
-                                 @selector(cagingArea),
-                                 cagingAreaValue,
-                                 OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(self, @selector(cagingArea), cagingAreaValue, OBJC_ASSOCIATION_RETAIN);
     }
 }
 
 - (CGRect)cagingArea
 {
-    NSValue *cagingAreaValue = objc_getAssociatedObject(self,
-                                                        @selector(cagingArea));
-    
+    NSValue *cagingAreaValue = objc_getAssociatedObject(self, @selector(cagingArea));
     return [cagingAreaValue CGRectValue];
 }
 
-- (void)setDraggingArea:(CGRect)draggingArea
+- (void)setHandle:(CGRect)handle
 {
     CGRect relativeFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    if (CGRectContainsRect(relativeFrame, draggingArea)) {
-        NSValue *draggingAreaValue = [NSValue valueWithCGRect:draggingArea];
-        objc_setAssociatedObject(self,
-                                 @selector(draggingArea),
-                                 draggingAreaValue,
-                                 OBJC_ASSOCIATION_RETAIN);
+    if (CGRectContainsRect(relativeFrame, handle)) {
+        NSValue *handleValue = [NSValue valueWithCGRect:handle];
+        objc_setAssociatedObject(self, @selector(handle), handleValue, OBJC_ASSOCIATION_RETAIN);
     }
 }
 
-- (CGRect)draggingArea
+- (CGRect)handle
 {
-    NSValue *draggingAreaValue = objc_getAssociatedObject(self,
-                                                          @selector(draggingArea));
-    
-    return [draggingAreaValue CGRectValue];
+    NSValue *handleValue = objc_getAssociatedObject(self, @selector(handle));
+    return [handleValue CGRectValue];
 }
 
 - (void)setShouldMoveAlongY:(BOOL)newShould
 {
     NSNumber *shouldMoveAlongYBool = [NSNumber numberWithBool:newShould];
-    
-    objc_setAssociatedObject(self,
-                             @selector(shouldMoveAlongY),
-                             shouldMoveAlongYBool,
-                             OBJC_ASSOCIATION_RETAIN
-                             );
+    objc_setAssociatedObject(self, @selector(shouldMoveAlongY), shouldMoveAlongYBool, OBJC_ASSOCIATION_RETAIN );
 }
 
 - (BOOL)shouldMoveAlongY
 {
-    NSNumber *moveAlongY = objc_getAssociatedObject(self,
-                                                    @selector(shouldMoveAlongY));
-    
+    NSNumber *moveAlongY = objc_getAssociatedObject(self, @selector(shouldMoveAlongY));
     return (moveAlongY) ? [moveAlongY boolValue] : YES;
 }
 
 - (void)setShouldMoveAlongX:(BOOL)newShould
 {
     NSNumber *shouldMoveAlongXBool = [NSNumber numberWithBool:newShould];
-    
-    objc_setAssociatedObject(self,
-                             @selector(shouldMoveAlongX),
-                             shouldMoveAlongXBool,
-                             OBJC_ASSOCIATION_RETAIN
-                             );
+    objc_setAssociatedObject(self, @selector(shouldMoveAlongX), shouldMoveAlongXBool, OBJC_ASSOCIATION_RETAIN );
 }
 
 - (BOOL)shouldMoveAlongX
 {
-    NSNumber *moveAlongX = objc_getAssociatedObject(self,
-                                                    @selector(shouldMoveAlongX));
-    
+    NSNumber *moveAlongX = objc_getAssociatedObject(self, @selector(shouldMoveAlongX));
     return (moveAlongX) ? [moveAlongX boolValue] : YES;
 }
 
--(void)setDraggingStartedBlock:(void (^)())draggingStartedBlock
+- (void)setDraggingStartedBlock:(void (^)())draggingStartedBlock
 {
-    objc_setAssociatedObject(self,
-                             @selector(draggingStartedBlock),
-                             draggingStartedBlock,
-                             OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, @selector(draggingStartedBlock), draggingStartedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
--(void (^)())draggingStartedBlock
+- (void (^)())draggingStartedBlock
 {
-    return objc_getAssociatedObject(self,
-                                    @selector(draggingStartedBlock));
+    return objc_getAssociatedObject(self, @selector(draggingStartedBlock));
 }
 
--(void)setDraggingEndedBlock:(void (^)())draggingEndedBlock
+- (void)setDraggingEndedBlock:(void (^)())draggingEndedBlock
 {
-    objc_setAssociatedObject(self,
-                             @selector(draggingEndedBlock),
-                             draggingEndedBlock,
-                             OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, @selector(draggingEndedBlock), draggingEndedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
--(void (^)())draggingEndedBlock
+- (void (^)())draggingEndedBlock
 {
-    return objc_getAssociatedObject(self,
-                                    @selector(draggingEndedBlock));
+    return objc_getAssociatedObject(self, @selector(draggingEndedBlock));
 }
 
 - (void)handlePan:(UIPanGestureRecognizer*)sender
 {
     // Check to make you drag from dragging area
     CGPoint locationInView = [sender locationInView:self];
-    if (!CGRectContainsPoint(self.draggingArea, locationInView)) {
+    if (!CGRectContainsPoint(self.handle, locationInView)) {
         return;
     }
     
@@ -203,7 +171,7 @@
     [self.panGesture setMaximumNumberOfTouches:1];
     [self.panGesture setMinimumNumberOfTouches:1];
     [self.panGesture setCancelsTouchesInView:NO];
-    [self setDraggingArea:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [self setHandle:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self addGestureRecognizer:self.panGesture];
 }
 

@@ -32,16 +32,12 @@
  */
 @property (nonatomic) CGRect cagingArea;
 
-
 /**
- An area on the view tap and hold where you can drag the view.
+ Restricts the area of the view where the drag action starts.
  
- From another part of the view it cannot be dragging
- 
- Optional. If not set, defaults is self.view.
+ Optional. If not set, defaults to self.view.
  */
-@property (nonatomic) CGRect draggingArea;
-
+@property (nonatomic) CGRect handle;
 
 /**
  Restricts the movement along the X axis
