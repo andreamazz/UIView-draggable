@@ -1,5 +1,4 @@
-UIView+draggable
-================
+#UIView+draggable
 
 [![Build Status](https://travis-ci.org/andreamazz/UIView-draggable.png)](https://travis-ci.org/andreamazz/UIView-draggable)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UIView+draggable/badge.png)](http://cocoapods.org/?q=summary%3Auiview%20name%3Adraggable%2A)
@@ -7,33 +6,32 @@ UIView+draggable
 
 UIView category that adds dragging capabilities
 
-Screenshot
---------------------
+##Screenshot
 ![UIVIew+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/screenshot.gif)
 
-Setup with Cocoapods
---------------------
+##Setup with Cocoapods
 * Add ```pod 'UIView+draggable'``` to your Podfile
 * Run ```pod install```
 * Run ```open App.xcworkspace```
-* Import ```UIVIew+draggable.h``` in your controller's header file
 
-Usage
---------------------
+###Objective-C
+Import ```UIVIew+draggable.h``` in your controller's header file
+###Swift
+If you are using `use_frameworks!` in your Podfile, use this import:
+```swift
+import UIView_draggable
+```
+
+##Usage
 ```objc
 // Enable dragging
 [self.view enableDragging];
 ```
 
-TODO
---------------------
-* Write the README :)
-
-MIT License
---------------------
+#MIT License
 	The MIT License (MIT)
 
-	Copyright (c) 2014 Andrea Mazzini
+	Copyright (c) 2015 Andrea Mazzini
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy of
 	this software and associated documentation files (the "Software"), to deal in
