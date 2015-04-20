@@ -1,14 +1,15 @@
-#UIView+draggable
+<p align="center">
+  <img src="assets/logo.png"/>
+</p>
 
 [![Build Status](https://travis-ci.org/cevitcejbo/UIView-draggable.svg)](https://travis-ci.org/cevitcejbo/UIView-draggable)
 [![Coverage Status](https://coveralls.io/repos/cevitcejbo/UIView-draggable/badge.svg)](https://coveralls.io/r/cevitcejbo/UIView-draggable)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UIView+draggable/badge.png)](http://cocoapods.org/?q=summary%3Auiview%20name%3Adraggable%2A)
-[![Analytics](https://ga-beacon.appspot.com/UA-42282237-8/UIView-draggable/README)](https://github.com/igrigorik/ga-beacon)
 
 UIView category that adds dragging capabilities
 
 ##Screenshot
-![UIVIew+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/screenshot.gif)
+![UIVIew+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/assets/screenshot.gif)
 
 ##Setup with Cocoapods
 * Add ```pod 'UIView+draggable'``` to your Podfile
