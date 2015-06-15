@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "655737361B2F5C0A00E3BFF6"
-               BuildableName = "UIView+draggable.framework"
-               BlueprintName = "UIView+draggable"
-               ReferencedContainer = "container:UIView+draggable.xcodeproj">
+               BlueprintIdentifier = "655737601B2F5F1500E3BFF6"
+               BuildableName = "UIView_draggable.framework"
+               BlueprintName = "UIView_draggable"
+               ReferencedContainer = "container:UIView_draggable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "655737411B2F5C0A00E3BFF6"
-               BuildableName = "UIView+draggableTests.xctest"
-               BlueprintName = "UIView+draggableTests"
-               ReferencedContainer = "container:UIView+draggable.xcodeproj">
+               BlueprintIdentifier = "6557376B1B2F5F1500E3BFF6"
+               BuildableName = "UIView_draggableTests.xctest"
+               BlueprintName = "UIView_draggableTests"
+               ReferencedContainer = "container:UIView_draggable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "655737411B2F5C0A00E3BFF6"
-               BuildableName = "UIView+draggableTests.xctest"
-               BlueprintName = "UIView+draggableTests"
-               ReferencedContainer = "container:UIView+draggable.xcodeproj">
+               BlueprintIdentifier = "6557376B1B2F5F1500E3BFF6"
+               BuildableName = "UIView_draggableTests.xctest"
+               BlueprintName = "UIView_draggableTests"
+               ReferencedContainer = "container:UIView_draggable.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "655737361B2F5C0A00E3BFF6"
-            BuildableName = "UIView+draggable.framework"
-            BlueprintName = "UIView+draggable"
-            ReferencedContainer = "container:UIView+draggable.xcodeproj">
+            BlueprintIdentifier = "655737601B2F5F1500E3BFF6"
+            BuildableName = "UIView_draggable.framework"
+            BlueprintName = "UIView_draggable"
+            ReferencedContainer = "container:UIView_draggable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "655737361B2F5C0A00E3BFF6"
-            BuildableName = "UIView+draggable.framework"
-            BlueprintName = "UIView+draggable"
-            ReferencedContainer = "container:UIView+draggable.xcodeproj">
+            BlueprintIdentifier = "655737601B2F5F1500E3BFF6"
+            BuildableName = "UIView_draggable.framework"
+            BlueprintName = "UIView_draggable"
+            ReferencedContainer = "container:UIView_draggable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "655737361B2F5C0A00E3BFF6"
-            BuildableName = "UIView+draggable.framework"
-            BlueprintName = "UIView+draggable"
-            ReferencedContainer = "container:UIView+draggable.xcodeproj">
+            BlueprintIdentifier = "655737601B2F5F1500E3BFF6"
+            BuildableName = "UIView_draggable.framework"
+            BlueprintName = "UIView_draggable"
+            ReferencedContainer = "container:UIView_draggable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
