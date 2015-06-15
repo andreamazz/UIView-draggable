@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		655737671B2F5F1500E3BFF6 /* UIView_draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 655737661B2F5F1500E3BFF6 /* UIView_draggable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65E172521B2F5F7600443809 /* UIView+draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E172501B2F5F7600443809 /* UIView+draggable.h */; };
+		655737671B2F5F1500E3BFF6 /* UIView_draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 655737661B2F5F1500E3BFF6 /* UIView_draggable.h */; };
+		65E172521B2F5F7600443809 /* UIView+draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E172501B2F5F7600443809 /* UIView+draggable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65E172531B2F5F7600443809 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E172511B2F5F7600443809 /* UIView+draggable.m */; };
 /* End PBXBuildFile section */
 
@@ -81,8 +81,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655737671B2F5F1500E3BFF6 /* UIView_draggable.h in Headers */,
 				65E172521B2F5F7600443809 /* UIView+draggable.h in Headers */,
+				655737671B2F5F1500E3BFF6 /* UIView_draggable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +258,10 @@
 				INFOPLIST_FILE = UIView_draggable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -273,6 +277,10 @@
 				INFOPLIST_FILE = UIView_draggable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
