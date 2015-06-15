@@ -5,8 +5,9 @@
 [![Build Status](https://travis-ci.org/cevitcejbo/UIView-draggable.svg)](https://travis-ci.org/cevitcejbo/UIView-draggable)
 [![Coverage Status](https://coveralls.io/repos/cevitcejbo/UIView-draggable/badge.svg)](https://coveralls.io/r/cevitcejbo/UIView-draggable)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UIView+draggable/badge.png)](http://cocoapods.org/?q=summary%3Auiview%20name%3Adraggable%2A)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-UIView category that adds dragging capabilities
+UIView category that adds dragging capabilities.
 
 ##Screenshot
 ![UIVIew+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/assets/screenshot.gif)
@@ -41,6 +42,26 @@ Call `enableDragging` on a UIView instance
 
 ```swift
 view.enableDragging()
+```
+
+##Options
+The movement area can be restricted to a given rect:
+
+```swift
+view.cagingArea = CGRectMake(0, 0, 200, 200)
+```
+
+The movement can be restricted over one coordinate:
+
+```swift
+view.shouldMoveAlongX = true
+view.shouldMoveAlongY = true
+```
+
+The area where the dragging action starts can be configured:
+
+```swift
+view.handle = CGRectMake(0, 0, 20, 20)
 ```
 
 #MIT License
