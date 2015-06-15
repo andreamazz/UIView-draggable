@@ -10,19 +10,7 @@
 		65157BEA1B2F5A4100129123 /* UIView+draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 65157BE81B2F5A4100129123 /* UIView+draggable.h */; };
 		65157BEB1B2F5A4100129123 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 65157BE91B2F5A4100129123 /* UIView+draggable.m */; };
 		652A51401B2F57760088D757 /* UIView_Draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 652A513F1B2F57760088D757 /* UIView_Draggable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		652A51461B2F57760088D757 /* UIView_Draggable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652A513A1B2F57760088D757 /* UIView_Draggable.framework */; };
-		652A514D1B2F57760088D757 /* UIView_DraggableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652A514C1B2F57760088D757 /* UIView_DraggableTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		652A51471B2F57760088D757 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 652A51311B2F57760088D757 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 652A51391B2F57760088D757;
-			remoteInfo = UIView_Draggable;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		65157BE81B2F5A4100129123 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+draggable.h"; path = "Source/UIView+draggable.h"; sourceTree = SOURCE_ROOT; };
@@ -30,7 +18,6 @@
 		652A513A1B2F57760088D757 /* UIView_Draggable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIView_Draggable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		652A513E1B2F57760088D757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652A513F1B2F57760088D757 /* UIView_Draggable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIView_Draggable.h; sourceTree = "<group>"; };
-		652A51451B2F57760088D757 /* UIView_DraggableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIView_DraggableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		652A514B1B2F57760088D757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652A514C1B2F57760088D757 /* UIView_DraggableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIView_DraggableTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,14 +27,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		652A51421B2F57760088D757 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				652A51461B2F57760088D757 /* UIView_Draggable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				652A513A1B2F57760088D757 /* UIView_Draggable.framework */,
-				652A51451B2F57760088D757 /* UIView_DraggableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,24 +127,6 @@
 			productReference = 652A513A1B2F57760088D757 /* UIView_Draggable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		652A51441B2F57760088D757 /* UIView_DraggableTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 652A51531B2F57760088D757 /* Build configuration list for PBXNativeTarget "UIView_DraggableTests" */;
-			buildPhases = (
-				652A51411B2F57760088D757 /* Sources */,
-				652A51421B2F57760088D757 /* Frameworks */,
-				652A51431B2F57760088D757 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				652A51481B2F57760088D757 /* PBXTargetDependency */,
-			);
-			name = UIView_DraggableTests;
-			productName = UIView_DraggableTests;
-			productReference = 652A51451B2F57760088D757 /* UIView_DraggableTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,9 +137,6 @@
 				ORGANIZATIONNAME = "Fancy Pixel";
 				TargetAttributes = {
 					652A51391B2F57760088D757 = {
-						CreatedOnToolsVersion = 6.3.2;
-					};
-					652A51441B2F57760088D757 = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
@@ -197,20 +154,12 @@
 			projectRoot = "";
 			targets = (
 				652A51391B2F57760088D757 /* UIView_Draggable */,
-				652A51441B2F57760088D757 /* UIView_DraggableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		652A51381B2F57760088D757 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		652A51431B2F57760088D757 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,23 +177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		652A51411B2F57760088D757 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				652A514D1B2F57760088D757 /* UIView_DraggableTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		652A51481B2F57760088D757 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 652A51391B2F57760088D757 /* UIView_Draggable */;
-			targetProxy = 652A51471B2F57760088D757 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		652A514E1B2F57760088D757 /* Debug */ = {
@@ -365,36 +298,6 @@
 			};
 			name = Release;
 		};
-		652A51541B2F57760088D757 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UIView_DraggableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		652A51551B2F57760088D757 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UIView_DraggableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,15 +315,6 @@
 			buildConfigurations = (
 				652A51511B2F57760088D757 /* Debug */,
 				652A51521B2F57760088D757 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		652A51531B2F57760088D757 /* Build configuration list for PBXNativeTarget "UIView_DraggableTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				652A51541B2F57760088D757 /* Debug */,
-				652A51551B2F57760088D757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
