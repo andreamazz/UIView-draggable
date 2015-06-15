@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65157BB71B2F579200129123 /* UIView+draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 65157BB51B2F579200129123 /* UIView+draggable.h */; };
+		65157BB81B2F579200129123 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 65157BB61B2F579200129123 /* UIView+draggable.m */; };
+		652A51401B2F57760088D757 /* UIView_Draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 652A513F1B2F57760088D757 /* UIView_Draggable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		652A51461B2F57760088D757 /* UIView_Draggable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652A513A1B2F57760088D757 /* UIView_Draggable.framework */; };
+		652A514D1B2F57760088D757 /* UIView_DraggableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652A514C1B2F57760088D757 /* UIView_DraggableTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		652A51471B2F57760088D757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 652A51311B2F57760088D757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652A51391B2F57760088D757;
+			remoteInfo = UIView_Draggable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		65157BB51B2F579200129123 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+draggable.h"; path = "../../Source/UIView+draggable.h"; sourceTree = "<group>"; };
+		65157BB61B2F579200129123 /* UIView+draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+draggable.m"; path = "../../Source/UIView+draggable.m"; sourceTree = "<group>"; };
+		652A513A1B2F57760088D757 /* UIView_Draggable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIView_Draggable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		652A513E1B2F57760088D757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652A513F1B2F57760088D757 /* UIView_Draggable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIView_Draggable.h; sourceTree = "<group>"; };
+		652A51451B2F57760088D757 /* UIView_DraggableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIView_DraggableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		652A514B1B2F57760088D757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652A514C1B2F57760088D757 /* UIView_DraggableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIView_DraggableTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		652A51361B2F57760088D757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652A51421B2F57760088D757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652A51461B2F57760088D757 /* UIView_Draggable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65157BB91B2F579600129123 /* UIView+draggable */ = {
+			isa = PBXGroup;
+			children = (
+				65157BB51B2F579200129123 /* UIView+draggable.h */,
+				65157BB61B2F579200129123 /* UIView+draggable.m */,
+			);
+			name = "UIView+draggable";
+			sourceTree = "<group>";
+		};
+		652A51301B2F57760088D757 = {
+			isa = PBXGroup;
+			children = (
+				652A513C1B2F57760088D757 /* UIView_Draggable */,
+				652A51491B2F57760088D757 /* UIView_DraggableTests */,
+				652A513B1B2F57760088D757 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		652A513B1B2F57760088D757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				652A513A1B2F57760088D757 /* UIView_Draggable.framework */,
+				652A51451B2F57760088D757 /* UIView_DraggableTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		652A513C1B2F57760088D757 /* UIView_Draggable */ = {
+			isa = PBXGroup;
+			children = (
+				65157BB91B2F579600129123 /* UIView+draggable */,
+				652A513F1B2F57760088D757 /* UIView_Draggable.h */,
+				652A513D1B2F57760088D757 /* Supporting Files */,
+			);
+			path = UIView_Draggable;
+			sourceTree = "<group>";
+		};
+		652A513D1B2F57760088D757 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				652A513E1B2F57760088D757 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		652A51491B2F57760088D757 /* UIView_DraggableTests */ = {
+			isa = PBXGroup;
+			children = (
+				652A514C1B2F57760088D757 /* UIView_DraggableTests.m */,
+				652A514A1B2F57760088D757 /* Supporting Files */,
+			);
+			path = UIView_DraggableTests;
+			sourceTree = "<group>";
+		};
+		652A514A1B2F57760088D757 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				652A514B1B2F57760088D757 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		652A51371B2F57760088D757 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652A51401B2F57760088D757 /* UIView_Draggable.h in Headers */,
+				65157BB71B2F579200129123 /* UIView+draggable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		652A51391B2F57760088D757 /* UIView_Draggable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652A51501B2F57760088D757 /* Build configuration list for PBXNativeTarget "UIView_Draggable" */;
+			buildPhases = (
+				652A51351B2F57760088D757 /* Sources */,
+				652A51361B2F57760088D757 /* Frameworks */,
+				652A51371B2F57760088D757 /* Headers */,
+				652A51381B2F57760088D757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIView_Draggable;
+			productName = UIView_Draggable;
+			productReference = 652A513A1B2F57760088D757 /* UIView_Draggable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		652A51441B2F57760088D757 /* UIView_DraggableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652A51531B2F57760088D757 /* Build configuration list for PBXNativeTarget "UIView_DraggableTests" */;
+			buildPhases = (
+				652A51411B2F57760088D757 /* Sources */,
+				652A51421B2F57760088D757 /* Frameworks */,
+				652A51431B2F57760088D757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652A51481B2F57760088D757 /* PBXTargetDependency */,
+			);
+			name = UIView_DraggableTests;
+			productName = UIView_DraggableTests;
+			productReference = 652A51451B2F57760088D757 /* UIView_DraggableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		652A51311B2F57760088D757 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Fancy Pixel";
+				TargetAttributes = {
+					652A51391B2F57760088D757 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					652A51441B2F57760088D757 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 652A51341B2F57760088D757 /* Build configuration list for PBXProject "UIView_Draggable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 652A51301B2F57760088D757;
+			productRefGroup = 652A513B1B2F57760088D757 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				652A51391B2F57760088D757 /* UIView_Draggable */,
+				652A51441B2F57760088D757 /* UIView_DraggableTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		652A51381B2F57760088D757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652A51431B2F57760088D757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		652A51351B2F57760088D757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65157BB81B2F579200129123 /* UIView+draggable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652A51411B2F57760088D757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652A514D1B2F57760088D757 /* UIView_DraggableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		652A51481B2F57760088D757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652A51391B2F57760088D757 /* UIView_Draggable */;
+			targetProxy = 652A51471B2F57760088D757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		652A514E1B2F57760088D757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		652A514F1B2F57760088D757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		652A51511B2F57760088D757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UIView_Draggable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		652A51521B2F57760088D757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UIView_Draggable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		652A51541B2F57760088D757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UIView_DraggableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		652A51551B2F57760088D757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UIView_DraggableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		652A51341B2F57760088D757 /* Build configuration list for PBXProject "UIView_Draggable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652A514E1B2F57760088D757 /* Debug */,
+				652A514F1B2F57760088D757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652A51501B2F57760088D757 /* Build configuration list for PBXNativeTarget "UIView_Draggable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652A51511B2F57760088D757 /* Debug */,
+				652A51521B2F57760088D757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652A51531B2F57760088D757 /* Build configuration list for PBXNativeTarget "UIView_DraggableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652A51541B2F57760088D757 /* Debug */,
+				652A51551B2F57760088D757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 652A51311B2F57760088D757 /* Project object */;
+}
