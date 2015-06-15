@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65157BB71B2F579200129123 /* UIView+draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 65157BB51B2F579200129123 /* UIView+draggable.h */; };
-		65157BB81B2F579200129123 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 65157BB61B2F579200129123 /* UIView+draggable.m */; };
+		65157BEA1B2F5A4100129123 /* UIView+draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 65157BE81B2F5A4100129123 /* UIView+draggable.h */; };
+		65157BEB1B2F5A4100129123 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 65157BE91B2F5A4100129123 /* UIView+draggable.m */; };
 		652A51401B2F57760088D757 /* UIView_Draggable.h in Headers */ = {isa = PBXBuildFile; fileRef = 652A513F1B2F57760088D757 /* UIView_Draggable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		652A51461B2F57760088D757 /* UIView_Draggable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652A513A1B2F57760088D757 /* UIView_Draggable.framework */; };
 		652A514D1B2F57760088D757 /* UIView_DraggableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652A514C1B2F57760088D757 /* UIView_DraggableTests.m */; };
@@ -25,8 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65157BB51B2F579200129123 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+draggable.h"; path = "../../Source/UIView+draggable.h"; sourceTree = "<group>"; };
-		65157BB61B2F579200129123 /* UIView+draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+draggable.m"; path = "../../Source/UIView+draggable.m"; sourceTree = "<group>"; };
+		65157BE81B2F5A4100129123 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+draggable.h"; path = "Source/UIView+draggable.h"; sourceTree = SOURCE_ROOT; };
+		65157BE91B2F5A4100129123 /* UIView+draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+draggable.m"; path = "Source/UIView+draggable.m"; sourceTree = SOURCE_ROOT; };
 		652A513A1B2F57760088D757 /* UIView_Draggable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIView_Draggable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		652A513E1B2F57760088D757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652A513F1B2F57760088D757 /* UIView_Draggable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIView_Draggable.h; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 		65157BB91B2F579600129123 /* UIView+draggable */ = {
 			isa = PBXGroup;
 			children = (
-				65157BB51B2F579200129123 /* UIView+draggable.h */,
-				65157BB61B2F579200129123 /* UIView+draggable.m */,
+				65157BE81B2F5A4100129123 /* UIView+draggable.h */,
+				65157BE91B2F5A4100129123 /* UIView+draggable.m */,
 			);
 			name = "UIView+draggable";
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652A51401B2F57760088D757 /* UIView_Draggable.h in Headers */,
-				65157BB71B2F579200129123 /* UIView+draggable.h in Headers */,
+				65157BEA1B2F5A4100129123 /* UIView+draggable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65157BB81B2F579200129123 /* UIView+draggable.m in Sources */,
+				65157BEB1B2F5A4100129123 /* UIView+draggable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
