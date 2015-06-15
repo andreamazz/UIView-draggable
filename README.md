@@ -16,18 +16,31 @@ UIView category that adds dragging capabilities
 * Run ```pod install```
 * Run ```open App.xcworkspace```
 
-###Objective-C
+####Objective-C
+
 Import ```UIVIew+draggable.h``` in your controller's header file
-###Swift
+
+####Swift
+
 If you are using `use_frameworks!` in your Podfile, use this import:
 ```swift
 import UIView_draggable
 ```
 
 ##Usage
+Call `enableDragging` on a UIView instance
+
+####Objective-C
+
 ```objc
 // Enable dragging
 [self.view enableDragging];
+```
+
+####Swift
+
+```swift
+view.enableDragging()
 ```
 
 #MIT License
