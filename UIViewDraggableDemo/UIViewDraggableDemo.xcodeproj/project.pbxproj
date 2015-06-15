@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652A512F1B2F571A0088D757 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 652A512E1B2F571A0088D757 /* UIView+draggable.m */; };
 		65F64E5C18D1A0F50041FE88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F64E5B18D1A0F50041FE88 /* Foundation.framework */; };
 		65F64E5E18D1A0F50041FE88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F64E5D18D1A0F50041FE88 /* CoreGraphics.framework */; };
 		65F64E6018D1A0F50041FE88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F64E5F18D1A0F50041FE88 /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		65F64E7D18D1A0F50041FE88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F64E5F18D1A0F50041FE88 /* UIKit.framework */; };
 		65F64E8518D1A0F50041FE88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65F64E8318D1A0F50041FE88 /* InfoPlist.strings */; };
 		65F64E8718D1A0F50041FE88 /* UIViewDraggableDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F64E8618D1A0F50041FE88 /* UIViewDraggableDemoTests.m */; };
-		65F64E9318D1A12E0041FE88 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F64E9218D1A12E0041FE88 /* UIView+draggable.m */; };
 		8A7FDECB5A7D13DC08EF2F08 /* libPods-UIViewDraggableDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DCABE42690C1B5A347EE0C /* libPods-UIViewDraggableDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652A512D1B2F571A0088D757 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+draggable.h"; path = "../Source/UIView+draggable.h"; sourceTree = "<group>"; };
+		652A512E1B2F571A0088D757 /* UIView+draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+draggable.m"; path = "../Source/UIView+draggable.m"; sourceTree = "<group>"; };
 		65F64E5818D1A0F50041FE88 /* UIViewDraggableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewDraggableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F64E5B18D1A0F50041FE88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65F64E5D18D1A0F50041FE88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,8 +57,6 @@
 		65F64E8218D1A0F50041FE88 /* UIViewDraggableDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIViewDraggableDemoTests-Info.plist"; sourceTree = "<group>"; };
 		65F64E8418D1A0F50041FE88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65F64E8618D1A0F50041FE88 /* UIViewDraggableDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewDraggableDemoTests.m; sourceTree = "<group>"; };
-		65F64E9118D1A12E0041FE88 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+draggable.h"; sourceTree = "<group>"; };
-		65F64E9218D1A12E0041FE88 /* UIView+draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+draggable.m"; sourceTree = "<group>"; };
 		A35B29E3E81BE978B94AEFB6 /* Pods-UIViewDraggableDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIViewDraggableDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIViewDraggableDemoTests/Pods-UIViewDraggableDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B617155DB2D6F9CFD27A9BD1 /* Pods-UIViewDraggableDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIViewDraggableDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIViewDraggableDemoTests/Pods-UIViewDraggableDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		E9DCABE42690C1B5A347EE0C /* libPods-UIViewDraggableDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIViewDraggableDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,8 +175,8 @@
 		65F64E9018D1A1160041FE88 /* UIView+draggable */ = {
 			isa = PBXGroup;
 			children = (
-				65F64E9118D1A12E0041FE88 /* UIView+draggable.h */,
-				65F64E9218D1A12E0041FE88 /* UIView+draggable.m */,
+				652A512D1B2F571A0088D757 /* UIView+draggable.h */,
+				652A512E1B2F571A0088D757 /* UIView+draggable.m */,
 			);
 			name = "UIView+draggable";
 			path = "../../UIView+draggable";
@@ -317,7 +317,7 @@
 			files = (
 				65F64E6C18D1A0F50041FE88 /* FPAppDelegate.m in Sources */,
 				65F64E6818D1A0F50041FE88 /* main.m in Sources */,
-				65F64E9318D1A12E0041FE88 /* UIView+draggable.m in Sources */,
+				652A512F1B2F571A0088D757 /* UIView+draggable.m in Sources */,
 				65F64E7218D1A0F50041FE88 /* FPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

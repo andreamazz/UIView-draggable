@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Fancy Pixel. All rights reserved.
 //
 
+@import UIKit;
+
 @interface UIView (draggable)
 
 /**-----------------------------------------------------------------------------
@@ -48,7 +50,6 @@
  Restricts the movement along the Y axis
  */
 @property (nonatomic) BOOL shouldMoveAlongY;
-
 
 /**
  Notifies when dragging started
