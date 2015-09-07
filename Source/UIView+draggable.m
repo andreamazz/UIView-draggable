@@ -11,18 +11,17 @@
 
 @implementation UIView (draggable)
 
-- (void)setPanGesture:(UIPanGestureRecognizer*)panGesture
-{
+#pragma mark - Associated properties
+
+- (void)setPanGesture:(UIPanGestureRecognizer*)panGesture {
     objc_setAssociatedObject(self, @selector(panGesture), panGesture, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (UIPanGestureRecognizer*)panGesture
-{
+- (UIPanGestureRecognizer*)panGesture {
     return objc_getAssociatedObject(self, @selector(panGesture));
 }
 
-- (void)setCagingArea:(CGRect)cagingArea
-{
+- (void)setCagingArea:(CGRect)cagingArea {
     if (CGRectEqualToRect(cagingArea, CGRectZero) ||
         CGRectContainsRect(cagingArea, self.frame)) {
         NSValue *cagingAreaValue = [NSValue valueWithCGRect:cagingArea];
@@ -30,14 +29,12 @@
     }
 }
 
-- (CGRect)cagingArea
-{
+- (CGRect)cagingArea {
     NSValue *cagingAreaValue = objc_getAssociatedObject(self, @selector(cagingArea));
     return [cagingAreaValue CGRectValue];
 }
 
-- (void)setHandle:(CGRect)handle
-{
+- (void)setHandle:(CGRect)handle {
     CGRect relativeFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     if (CGRectContainsRect(relativeFrame, handle)) {
         NSValue *handleValue = [NSValue valueWithCGRect:handle];
@@ -45,58 +42,50 @@
     }
 }
 
-- (CGRect)handle
-{
+- (CGRect)handle {
     NSValue *handleValue = objc_getAssociatedObject(self, @selector(handle));
     return [handleValue CGRectValue];
 }
 
-- (void)setShouldMoveAlongY:(BOOL)newShould
-{
+- (void)setShouldMoveAlongY:(BOOL)newShould {
     NSNumber *shouldMoveAlongYBool = [NSNumber numberWithBool:newShould];
     objc_setAssociatedObject(self, @selector(shouldMoveAlongY), shouldMoveAlongYBool, OBJC_ASSOCIATION_RETAIN );
 }
 
-- (BOOL)shouldMoveAlongY
-{
+- (BOOL)shouldMoveAlongY {
     NSNumber *moveAlongY = objc_getAssociatedObject(self, @selector(shouldMoveAlongY));
     return (moveAlongY) ? [moveAlongY boolValue] : YES;
 }
 
-- (void)setShouldMoveAlongX:(BOOL)newShould
-{
+- (void)setShouldMoveAlongX:(BOOL)newShould {
     NSNumber *shouldMoveAlongXBool = [NSNumber numberWithBool:newShould];
     objc_setAssociatedObject(self, @selector(shouldMoveAlongX), shouldMoveAlongXBool, OBJC_ASSOCIATION_RETAIN );
 }
 
-- (BOOL)shouldMoveAlongX
-{
+- (BOOL)shouldMoveAlongX {
     NSNumber *moveAlongX = objc_getAssociatedObject(self, @selector(shouldMoveAlongX));
     return (moveAlongX) ? [moveAlongX boolValue] : YES;
 }
 
-- (void)setDraggingStartedBlock:(void (^)())draggingStartedBlock
-{
+- (void)setDraggingStartedBlock:(void (^)())draggingStartedBlock {
     objc_setAssociatedObject(self, @selector(draggingStartedBlock), draggingStartedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())draggingStartedBlock
-{
+- (void (^)())draggingStartedBlock {
     return objc_getAssociatedObject(self, @selector(draggingStartedBlock));
 }
 
-- (void)setDraggingEndedBlock:(void (^)())draggingEndedBlock
-{
+- (void)setDraggingEndedBlock:(void (^)())draggingEndedBlock {
     objc_setAssociatedObject(self, @selector(draggingEndedBlock), draggingEndedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())draggingEndedBlock
-{
+- (void (^)())draggingEndedBlock {
     return objc_getAssociatedObject(self, @selector(draggingEndedBlock));
 }
 
-- (void)handlePan:(UIPanGestureRecognizer*)sender
-{
+#pragma mark - Gesture recognizer
+
+- (void)handlePan:(UIPanGestureRecognizer*)sender {
     // Check to make you drag from dragging area
     CGPoint locationInView = [sender locationInView:self];
     if (!CGRectContainsPoint(self.handle, locationInView)) {
@@ -148,8 +137,7 @@
     [sender setTranslation:(CGPoint){0, 0} inView:[self superview]];
 }
 
-- (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
-{
+- (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         UIView *piece = self;
         CGPoint locationInView = [gestureRecognizer locationInView:piece];
@@ -160,13 +148,13 @@
     }
 }
 
-- (void)setDraggable:(BOOL)draggable
-{
+#pragma mark - Drag state handling
+
+- (void)setDraggable:(BOOL)draggable {
     [self.panGesture setEnabled:draggable];
 }
 
-- (void)enableDragging
-{
+- (void)enableDragging {
     self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [self.panGesture setMaximumNumberOfTouches:1];
     [self.panGesture setMinimumNumberOfTouches:1];

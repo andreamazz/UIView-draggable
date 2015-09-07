@@ -17,6 +17,11 @@ UIView category that adds dragging capabilities.
 * Run ```pod install```
 * Run ```open App.xcworkspace```
 
+##Setup with Carthage
+```
+github "andreamazz/UIView-draggable"
+```
+
 ####Objective-C
 
 Import ```UIVIew+draggable.h``` in your controller's header file
