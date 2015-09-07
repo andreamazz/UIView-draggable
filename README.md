@@ -10,7 +10,7 @@
 UIView category that adds dragging capabilities.
 
 ##Screenshot
-![UIVIew+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/assets/screenshot.gif)
+![UIView+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/assets/screenshot.gif)
 
 ##Setup with Cocoapods
 * Add ```pod 'UIView+draggable'``` to your Podfile
@@ -24,7 +24,7 @@ github "andreamazz/UIView-draggable"
 
 ####Objective-C
 
-Import ```UIVIew+draggable.h``` in your controller's header file
+Import ```UIView+draggable.h``` in your controller's header file
 
 ####Swift
 
