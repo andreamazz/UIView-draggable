@@ -91,14 +91,15 @@
     if (!CGRectContainsPoint(self.handle, locationInView)) {
         return;
     }
-    
+
     [self adjustAnchorPointForGestureRecognizer:sender];
-    
+
     if (sender.state == UIGestureRecognizerStateBegan && self.draggingStartedBlock) {
         self.draggingStartedBlock();
     }
     
     if (sender.state == UIGestureRecognizerStateEnded && self.draggingEndedBlock) {
+        self.layer.anchorPoint = CGPointMake(0.5, 0.5);
         self.draggingEndedBlock();
     }
     
@@ -128,38 +129,39 @@
             newYOrigin = CGRectGetMinY(self.frame);
         }
     }
-    
-    [self setFrame:CGRectMake(newXOrigin,
-                              newYOrigin,
-                              CGRectGetWidth(self.frame),
-                              CGRectGetHeight(self.frame))];
-    
+
+    self.frame = CGRectMake(newXOrigin,
+                            newYOrigin,
+                            CGRectGetWidth(self.frame),
+                            CGRectGetHeight(self.frame));
+
     [sender setTranslation:(CGPoint){0, 0} inView:[self superview]];
 }
 
 - (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
-        UIView *piece = self;
-        CGPoint locationInView = [gestureRecognizer locationInView:piece];
-        CGPoint locationInSuperview = [gestureRecognizer locationInView:piece.superview];
-        
-        piece.layer.anchorPoint = CGPointMake(locationInView.x / piece.bounds.size.width, locationInView.y / piece.bounds.size.height);
-        piece.center = locationInSuperview;
+        CGPoint locationInView = [gestureRecognizer locationInView:self];
+        CGPoint locationInSuperview = [gestureRecognizer locationInView:self.superview];
+
+        self.layer.anchorPoint = CGPointMake(locationInView.x / self.bounds.size.width, locationInView.y / self.bounds.size.height);
+        self.center = locationInSuperview;
     }
 }
 
 #pragma mark - Drag state handling
 
 - (void)setDraggable:(BOOL)draggable {
-    [self.panGesture setEnabled:draggable];
+    self.panGesture.enabled = draggable;
 }
 
 - (void)enableDragging {
+    self.translatesAutoresizingMaskIntoConstraints = YES;
+    
     self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-    [self.panGesture setMaximumNumberOfTouches:1];
-    [self.panGesture setMinimumNumberOfTouches:1];
-    [self.panGesture setCancelsTouchesInView:NO];
-    [self setHandle:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    self.panGesture.maximumNumberOfTouches = 1;
+    self.panGesture.minimumNumberOfTouches = 1;
+    self.panGesture.cancelsTouchesInView = NO;
+    self.handle = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     [self addGestureRecognizer:self.panGesture];
 }
 

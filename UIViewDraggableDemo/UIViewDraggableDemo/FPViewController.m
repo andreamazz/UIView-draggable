@@ -18,8 +18,7 @@
 
 @implementation FPViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
 	[self.draggableViews enumerateObjectsUsingBlock:^(UIView* obj, NSUInteger idx, BOOL *stop) {
@@ -29,14 +28,13 @@
 	}];
 }
 
-- (IBAction)actionSwitch:(UISwitch*)sender
-{
+- (IBAction)actionSwitch:(UISwitch*)sender {
 	[self.draggableViews enumerateObjectsUsingBlock:^(UIView* obj, NSUInteger idx, BOOL *stop) {
 		[obj setDraggable:sender.isOn];
 	}];
 }
-- (IBAction)didToggleCagingAreaSwitch:(UISwitch *)sender
-{
+
+- (IBAction)didToggleCagingAreaSwitch:(UISwitch *)sender {
     CGRect cagingArea = CGRectZero;
     
     if ([sender isOn]) {
