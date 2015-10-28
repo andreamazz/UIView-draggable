@@ -138,6 +138,11 @@
     [sender setTranslation:(CGPoint){0, 0} inView:[self superview]];
 }
 
+- (void)setNeedsLayout {
+    // Fix for issue #12
+    // If the layout of the content changes, callign [super setNeedsLayout] causes the view to jump back
+}
+
 - (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         CGPoint locationInView = [gestureRecognizer locationInView:self];
@@ -155,8 +160,6 @@
 }
 
 - (void)enableDragging {
-    self.translatesAutoresizingMaskIntoConstraints = YES;
-    
     self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     self.panGesture.maximumNumberOfTouches = 1;
     self.panGesture.minimumNumberOfTouches = 1;
