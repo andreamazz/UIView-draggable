@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UIView+draggable"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "UIView category that adds dragging capabilities"
   s.homepage     = "https://github.com/andreamazz/UIView-draggable"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
