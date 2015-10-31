@@ -10,7 +10,7 @@
 UIView category that adds dragging capabilities.
 
 <p align="center">
-  <a href='https://appetize.io/app/xqrv7a36gac5wx0dz1qj75j7pm' alt='Live demo'>
+  <a href='https://appetize.io/app/rey013220c4b9pex34kg1qaf84' alt='Live demo'>
     <img width="50" height="60" src="assets/demo.png"/>
   </a>
 </p>
