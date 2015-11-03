@@ -8,12 +8,11 @@
 
 @import UIKit;
 
-@interface UIView (draggable)
-
-/**-----------------------------------------------------------------------------
- * @name UIView+draggable Properties
- * -----------------------------------------------------------------------------
+/**
+ * @name UIView+draggable
+ * Adds the ability to drag a UIView
  */
+@interface UIView (draggable)
 
 /** The pan gestures that handles the view dragging
  *
@@ -60,12 +59,6 @@
  Notifies when dragging ended
  */
 @property (nonatomic, copy) void (^draggingEndedBlock)();
-
-
-/**-----------------------------------------------------------------------------
- * @name UIView+draggable Methods
- * -----------------------------------------------------------------------------
- */
 
 /** Enables the dragging
  *

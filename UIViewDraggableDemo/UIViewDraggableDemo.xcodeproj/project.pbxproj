@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		652A512F1B2F571A0088D757 /* UIView+draggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 652A512E1B2F571A0088D757 /* UIView+draggable.m */; };
+		653452431BE9663B0014E573 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653452421BE9663B0014E573 /* Launch Screen.storyboard */; };
 		65F64E5C18D1A0F50041FE88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F64E5B18D1A0F50041FE88 /* Foundation.framework */; };
 		65F64E5E18D1A0F50041FE88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F64E5D18D1A0F50041FE88 /* CoreGraphics.framework */; };
 		65F64E6018D1A0F50041FE88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F64E5F18D1A0F50041FE88 /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		652A512D1B2F571A0088D757 /* UIView+draggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+draggable.h"; path = "../Source/UIView+draggable.h"; sourceTree = "<group>"; };
 		652A512E1B2F571A0088D757 /* UIView+draggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+draggable.m"; path = "../Source/UIView+draggable.m"; sourceTree = "<group>"; };
+		653452421BE9663B0014E573 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		65F64E5818D1A0F50041FE88 /* UIViewDraggableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewDraggableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F64E5B18D1A0F50041FE88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65F64E5D18D1A0F50041FE88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,6 +98,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		653452411BE965C20014E573 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65F64E6D18D1A0F50041FE88 /* Main.storyboard */,
+				65F64E7318D1A0F50041FE88 /* Images.xcassets */,
+				653452421BE9663B0014E573 /* Launch Screen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		65F64E4F18D1A0F50041FE88 = {
 			isa = PBXGroup;
 			children = (
@@ -131,13 +143,12 @@
 		65F64E6118D1A0F50041FE88 /* UIViewDraggableDemo */ = {
 			isa = PBXGroup;
 			children = (
+				653452411BE965C20014E573 /* Resources */,
 				65F64E9018D1A1160041FE88 /* UIView+draggable */,
 				65F64E6A18D1A0F50041FE88 /* FPAppDelegate.h */,
 				65F64E6B18D1A0F50041FE88 /* FPAppDelegate.m */,
-				65F64E6D18D1A0F50041FE88 /* Main.storyboard */,
 				65F64E7018D1A0F50041FE88 /* FPViewController.h */,
 				65F64E7118D1A0F50041FE88 /* FPViewController.m */,
-				65F64E7318D1A0F50041FE88 /* Images.xcassets */,
 				65F64E6218D1A0F50041FE88 /* Supporting Files */,
 			);
 			path = UIViewDraggableDemo;
@@ -263,6 +274,7 @@
 			files = (
 				65F64E7418D1A0F50041FE88 /* Images.xcassets in Resources */,
 				65F64E6618D1A0F50041FE88 /* InfoPlist.strings in Resources */,
+				653452431BE9663B0014E573 /* Launch Screen.storyboard in Resources */,
 				65F64E6F18D1A0F50041FE88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,10 +458,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIViewDraggableDemo/UIViewDraggableDemo-Prefix.pch";
 				INFOPLIST_FILE = "UIViewDraggableDemo/UIViewDraggableDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,10 +471,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIViewDraggableDemo/UIViewDraggableDemo-Prefix.pch";
 				INFOPLIST_FILE = "UIViewDraggableDemo/UIViewDraggableDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
