@@ -88,7 +88,8 @@
 - (void)handlePan:(UIPanGestureRecognizer*)sender {
     // Check to make you drag from dragging area
     CGPoint locationInView = [sender locationInView:self];
-    if (!CGRectContainsPoint(self.handle, locationInView)) {
+    if (!CGRectContainsPoint(self.handle, locationInView)
+        && sender.state == UIGestureRecognizerStateBegan) {
         return;
     }
 
@@ -97,33 +98,33 @@
     if (sender.state == UIGestureRecognizerStateBegan && self.draggingStartedBlock) {
         self.draggingStartedBlock();
     }
-    
+
     if (sender.state == UIGestureRecognizerStateEnded && self.draggingEndedBlock) {
         self.layer.anchorPoint = CGPointMake(0.5, 0.5);
         self.draggingEndedBlock();
     }
-    
+
     CGPoint translation = [sender translationInView:[self superview]];
-    
+
     CGFloat newXOrigin = CGRectGetMinX(self.frame) + (([self shouldMoveAlongX]) ? translation.x : 0);
     CGFloat newYOrigin = CGRectGetMinY(self.frame) + (([self shouldMoveAlongY]) ? translation.y : 0);
-    
+
     CGRect cagingArea = self.cagingArea;
-    
+
     CGFloat cagingAreaOriginX = CGRectGetMinX(cagingArea);
     CGFloat cagingAreaOriginY = CGRectGetMinY(cagingArea);
-    
+
     CGFloat cagingAreaRightSide = cagingAreaOriginX + CGRectGetWidth(cagingArea);
     CGFloat cagingAreaBottomSide = cagingAreaOriginY + CGRectGetHeight(cagingArea);
-    
+
     if (!CGRectEqualToRect(cagingArea, CGRectZero)) {
-        
+
         // Check to make sure the view is still within the caging area
         if (newXOrigin <= cagingAreaOriginX ||
             newYOrigin <= cagingAreaOriginY ||
             newXOrigin + CGRectGetWidth(self.frame) >= cagingAreaRightSide ||
             newYOrigin + CGRectGetHeight(self.frame) >= cagingAreaBottomSide) {
-            
+
             // Don't move
             newXOrigin = CGRectGetMinX(self.frame);
             newYOrigin = CGRectGetMinY(self.frame);
