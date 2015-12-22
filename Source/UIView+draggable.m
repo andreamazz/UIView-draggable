@@ -75,6 +75,14 @@
     return objc_getAssociatedObject(self, @selector(draggingStartedBlock));
 }
 
+- (void)setDraggingOccurredBlock:(void (^)())draggingOccurredBlock {
+    objc_setAssociatedObject(self, @selector(draggingOccurredBlock), draggingOccurredBlock, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (void (^)())draggingOccurredBlock {
+    return objc_getAssociatedObject(self, @selector(draggingOccurredBlock));
+}
+
 - (void)setDraggingEndedBlock:(void (^)())draggingEndedBlock {
     objc_setAssociatedObject(self, @selector(draggingEndedBlock), draggingEndedBlock, OBJC_ASSOCIATION_RETAIN);
 }
@@ -97,6 +105,10 @@
 
     if (sender.state == UIGestureRecognizerStateBegan && self.draggingStartedBlock) {
         self.draggingStartedBlock();
+    }
+
+    if (sender.state == UIGestureRecognizerStateChanged && self.draggingOccurredBlock) {
+        self.draggingOccurredBlock();
     }
 
     if (sender.state == UIGestureRecognizerStateEnded && self.draggingEndedBlock) {
