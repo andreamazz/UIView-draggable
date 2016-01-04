@@ -58,7 +58,7 @@
 /**
  Notifies when dragging has occurred
  */
-@property (nonatomic, copy) void (^draggingOccurredBlock)();
+@property (nonatomic, copy) void (^draggingMovedBlock)();
 
 /**
  Notifies when dragging ended
