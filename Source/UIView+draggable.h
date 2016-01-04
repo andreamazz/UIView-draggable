@@ -56,7 +56,7 @@
 @property (nonatomic, copy) void (^draggingStartedBlock)();
 
 /**
- Notifies when dragging has occurred
+ Notifies when dragging has moved
  */
 @property (nonatomic, copy) void (^draggingMovedBlock)();
 
