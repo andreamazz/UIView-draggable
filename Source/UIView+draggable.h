@@ -23,11 +23,11 @@
 /**
  A caging area such that the view can not be moved outside
  of this frame.
- 
+
  If @c cagingArea is not @c CGRectZero, and @c cagingArea does not contain the
  view's frame then this does nothing (ie. if the bounds of the view extend the
  bounds of @c cagingArea).
- 
+
  Optional. If not set, defaults to @c CGRectZero, which will result
  in no caging behavior.
  */
@@ -35,7 +35,7 @@
 
 /**
  Restricts the area of the view where the drag action starts.
- 
+
  Optional. If not set, defaults to self.view.
  */
 @property (nonatomic) CGRect handle;
@@ -54,6 +54,11 @@
  Notifies when dragging started
  */
 @property (nonatomic, copy) void (^draggingStartedBlock)();
+
+/**
+ Notifies when dragging has moved
+ */
+@property (nonatomic, copy) void (^draggingMovedBlock)();
 
 /**
  Notifies when dragging ended
