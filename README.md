@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/cevitcejbo/UIView-draggable.svg)](https://travis-ci.org/cevitcejbo/UIView-draggable)
 [![Coverage Status](https://coveralls.io/repos/cevitcejbo/UIView-draggable/badge.svg)](https://coveralls.io/r/cevitcejbo/UIView-draggable)
-[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UIView+draggable/badge.png)](http://cocoapods.org/?q=summary%3Auiview%20name%3Adraggable%2A)
+[![CocoaPods](https://cocoapod-badges.herokuapp.com/v/UIView+draggable/badge.png)](http://cocoapods.org/?q=summary%3Auiview%20name%3Adraggable%2A)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 UIView category that adds dragging capabilities.
@@ -18,7 +18,7 @@ UIView category that adds dragging capabilities.
 ##Screenshot
 ![UIView+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/assets/screenshot.gif)
 
-##Setup with Cocoapods
+##Setup with CocoaPods
 * Add ```pod 'UIView+draggable'``` to your Podfile
 * Run ```pod install```
 * Run ```open App.xcworkspace```
