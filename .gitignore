@@ -18,5 +18,3 @@ DerivedData
 *.xccheckout
 
 #CocoaPods
-Pods
-*.xcworkspace
