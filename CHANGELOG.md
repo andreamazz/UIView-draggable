@@ -2,10 +2,14 @@
 All notable changes to this project will be documented in this file.
 `UIView+draggable` adheres to [Semantic Versioning](http://semver.org/).
 
-- `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102) | [1.0.3](#103)  
+- `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102) | [1.0.3](#103) | [1.0.4](#104)  
 - `0.6.x` Releases - [0.6](#06)
 
 ---
+
+## [1.0.4](https://github.com/andreamazz/UIView-draggable/releases/tag/1.0.4)  
+
+Fixed #21
 
 ## [1.0.3](https://github.com/andreamazz/UIView-draggable/releases/tag/1.0.3)  
 
