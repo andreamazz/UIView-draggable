@@ -130,15 +130,17 @@
     CGFloat cagingAreaBottomSide = cagingAreaOriginY + CGRectGetHeight(cagingArea);
 
     if (!CGRectEqualToRect(cagingArea, CGRectZero)) {
-
-        // Check to make sure the view is still within the caging area
+        // Check to make sure the view is still horizontaly within the caging area
         if (newXOrigin <= cagingAreaOriginX ||
-            newYOrigin <= cagingAreaOriginY ||
-            newXOrigin + CGRectGetWidth(self.frame) >= cagingAreaRightSide ||
-            newYOrigin + CGRectGetHeight(self.frame) >= cagingAreaBottomSide) {
-
+            newXOrigin + CGRectGetWidth(self.frame) >= cagingAreaRightSide) {
             // Don't move
             newXOrigin = CGRectGetMinX(self.frame);
+        }
+
+        // Check to make sure the view is still vertically within the caging area
+        if(newYOrigin <= cagingAreaOriginY ||
+           newYOrigin + CGRectGetHeight(self.frame) >= cagingAreaBottomSide) {
+            // Don't move
             newYOrigin = CGRectGetMinY(self.frame);
         }
     }
