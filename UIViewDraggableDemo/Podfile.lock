@@ -1,30 +1,37 @@
 PODS:
-  - Expecta (0.4.1)
-  - Expecta+Snapshots (1.3.2):
-    - Expecta (~> 0.3)
-    - FBSnapshotTestCase (= 1.6)
-  - FBSnapshotTestCase (1.6)
-  - OCHamcrest (4.1.1)
-  - OCMock (3.1.2)
-  - OCMockito (1.4.0):
-    - OCHamcrest (~> 4.0)
-  - Specta (0.5.0)
+  - Expecta (1.0.5)
+  - Expecta+Snapshots (3.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0)
+    - Specta (~> 1.0)
+  - FBSnapshotTestCase/Core (2.0.7)
+  - OCHamcrest (5.2.0)
+  - OCMock (3.2)
+  - OCMockito (3.0.1):
+    - OCHamcrest (~> 5.1)
+  - Specta (1.0.5)
+  - UIView+draggable (1.0.3)
 
 DEPENDENCIES:
-  - Expecta
-  - Expecta+Snapshots
-  - FBSnapshotTestCase
-  - OCMock
+  - Expecta (= 1.0.5)
+  - Expecta+Snapshots (= 3.0.0)
+  - OCMock (= 3.2)
   - OCMockito
-  - Specta
+  - Specta (= 1.0.5)
+  - UIView+draggable (from `../`)
+
+EXTERNAL SOURCES:
+  UIView+draggable:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Expecta: a2f175f4f5f99d062d480787945ea11d8884077e
-  Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
-  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  OCHamcrest: 6f03ffa81d12feab872638490a44ab0a6d3aca10
-  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
-  OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2
-  Specta: eb90708ed77569bbda089f8ead10bb99b8e9489e
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
+  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
+  OCHamcrest: 218dc4022a5e928a275771da70c5dbea9f859287
+  OCMock: 28def049ef47f996b515a8eeea958be7ccab2dbb
+  OCMockito: 9eee3c61e42f7cb8aa015d66f8cc16849701d973
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+  UIView+draggable: ba71460cefb4d4d04da09f78e878e8239b1b6aeb
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.39.0

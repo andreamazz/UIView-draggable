@@ -1,8 +1,8 @@
 #import <objc/runtime.h>
 
+#define EXP_SHORTHAND
 #import <Specta/Specta.h>
 #import <Expecta/Expecta.h>
-#import <FBSnapshotTestCase/FBSnapshotTestCase.h>
 #import <Expecta+Snapshots/EXPMatchers+FBSnapshotTest.h>
 #import <OCMock/OCMock.h>
 

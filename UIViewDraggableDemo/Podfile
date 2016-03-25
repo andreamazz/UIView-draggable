@@ -1,16 +1,17 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
 
 target 'UIViewDraggableDemo' do
-
+  pod 'UIView+draggable', path: '../'
 end
 
 target 'UIViewDraggableDemoTests' do
-	pod 'FBSnapshotTestCase'
-	pod 'Expecta+Snapshots'
-	pod 'Specta'
-	pod 'Expecta'
-	pod 'OCMock'
-	pod 'OCMockito'
+  pod 'UIView+draggable', path: '../'
+  pod 'Specta', '1.0.5'
+  pod 'Expecta', '1.0.5'
+  pod 'Expecta+Snapshots', '3.0.0'
+  pod 'OCMock', '3.2'
+  pod 'OCMockito'
 end
 
