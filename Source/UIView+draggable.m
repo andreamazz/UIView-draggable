@@ -67,27 +67,27 @@
     return (moveAlongX) ? [moveAlongX boolValue] : YES;
 }
 
-- (void)setDraggingStartedBlock:(void (^)())draggingStartedBlock {
+- (void)setDraggingStartedBlock:(void (^)(id))draggingStartedBlock {
     objc_setAssociatedObject(self, @selector(draggingStartedBlock), draggingStartedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())draggingStartedBlock {
+- (void (^)(id))draggingStartedBlock {
     return objc_getAssociatedObject(self, @selector(draggingStartedBlock));
 }
 
-- (void)setDraggingMovedBlock:(void (^)())draggingMovedBlock {
+- (void)setDraggingMovedBlock:(void (^)(id))draggingMovedBlock {
     objc_setAssociatedObject(self, @selector(draggingMovedBlock), draggingMovedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())draggingMovedBlock {
+- (void (^)(id))draggingMovedBlock {
     return objc_getAssociatedObject(self, @selector(draggingMovedBlock));
 }
 
-- (void)setDraggingEndedBlock:(void (^)())draggingEndedBlock {
+- (void)setDraggingEndedBlock:(void (^)(id))draggingEndedBlock {
     objc_setAssociatedObject(self, @selector(draggingEndedBlock), draggingEndedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())draggingEndedBlock {
+- (void (^)(id))draggingEndedBlock {
     return objc_getAssociatedObject(self, @selector(draggingEndedBlock));
 }
 
@@ -104,16 +104,16 @@
     [self adjustAnchorPointForGestureRecognizer:sender];
 
     if (sender.state == UIGestureRecognizerStateBegan && self.draggingStartedBlock) {
-        self.draggingStartedBlock();
+        self.draggingStartedBlock(self);
     }
 
     if (sender.state == UIGestureRecognizerStateChanged && self.draggingMovedBlock) {
-        self.draggingMovedBlock();
+        self.draggingMovedBlock(self);
     }
 
     if (sender.state == UIGestureRecognizerStateEnded && self.draggingEndedBlock) {
         self.layer.anchorPoint = CGPointMake(0.5, 0.5);
-        self.draggingEndedBlock();
+        self.draggingEndedBlock(self);
     }
 
     CGPoint translation = [sender translationInView:[self superview]];

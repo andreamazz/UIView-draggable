@@ -53,17 +53,17 @@
 /**
  Notifies when dragging started
  */
-@property (nonatomic, copy) void (^draggingStartedBlock)();
+@property (nonatomic, copy) void (^draggingStartedBlock)(id);
 
 /**
  Notifies when dragging has moved
  */
-@property (nonatomic, copy) void (^draggingMovedBlock)();
+@property (nonatomic, copy) void (^draggingMovedBlock)(id);
 
 /**
  Notifies when dragging ended
  */
-@property (nonatomic, copy) void (^draggingEndedBlock)();
+@property (nonatomic, copy) void (^draggingEndedBlock)(id);
 
 /** Enables the dragging
  *
