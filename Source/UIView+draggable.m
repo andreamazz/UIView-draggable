@@ -67,27 +67,27 @@
     return (moveAlongX) ? [moveAlongX boolValue] : YES;
 }
 
-- (void)setDraggingStartedBlock:(void (^)(id))draggingStartedBlock {
+- (void)setDraggingStartedBlock:(void (^)(UIView *))draggingStartedBlock {
     objc_setAssociatedObject(self, @selector(draggingStartedBlock), draggingStartedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)(id))draggingStartedBlock {
+- (void (^)(UIView *))draggingStartedBlock {
     return objc_getAssociatedObject(self, @selector(draggingStartedBlock));
 }
 
-- (void)setDraggingMovedBlock:(void (^)(id))draggingMovedBlock {
+- (void)setDraggingMovedBlock:(void (^)(UIView *))draggingMovedBlock {
     objc_setAssociatedObject(self, @selector(draggingMovedBlock), draggingMovedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)(id))draggingMovedBlock {
+- (void (^)(UIView *))draggingMovedBlock {
     return objc_getAssociatedObject(self, @selector(draggingMovedBlock));
 }
 
-- (void)setDraggingEndedBlock:(void (^)(id))draggingEndedBlock {
+- (void)setDraggingEndedBlock:(void (^)(UIView *))draggingEndedBlock {
     objc_setAssociatedObject(self, @selector(draggingEndedBlock), draggingEndedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)(id))draggingEndedBlock {
+- (void (^)(UIView *))draggingEndedBlock {
     return objc_getAssociatedObject(self, @selector(draggingEndedBlock));
 }
 
