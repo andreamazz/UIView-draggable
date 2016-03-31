@@ -3,7 +3,7 @@
 //  UIView+draggable
 //
 //  Created by Andrea on 13/03/14.
-//  Copyright (c) 2014 Fancy Pixel. All rights reserved.
+//  Copyright (c) 2016 Andrea Mazzini. All rights reserved.
 //
 
 #import "UIView+draggable.h"
