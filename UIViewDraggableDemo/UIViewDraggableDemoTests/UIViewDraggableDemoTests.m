@@ -157,19 +157,39 @@ describe(@"draggable view", ^{
             
             it(@"should call dragging started block", ^{
                 __block BOOL draggingStartedCalled = NO;
-                view.draggingStartedBlock = ^{
-                    draggingStartedCalled = YES;
+                __weak UIView * weakView = view;
+                view.draggingStartedBlock = ^(UIView * draggingView){
+                    if([draggingView isEqual:weakView]){
+                        draggingStartedCalled = YES;
+                    }
                 };
                 
                 [view simulatePanGestureWithCheckPoints:@[P(30.0, 20.0)]
                                                  action:recognizerSelector];
                 expect(draggingStartedCalled).to.beTruthy();
             });
-            
+            it(@"should call dragging moved block", ^{
+                __block BOOL draggingMovedCalled = NO;
+                __weak UIView * weakView = view;
+                view.draggingMovedBlock = ^(UIView * draggingView){
+                    if([draggingView isEqual:weakView]){
+                        draggingMovedCalled = YES;
+                    }
+                };
+                
+                [view simulatePanGestureWithCheckPoints:@[P(30.0, 20.0),
+                                                          P(40.0, 20.0),
+                                                          P(40.0, 20.0)]
+                                                 action:recognizerSelector];
+                expect(draggingMovedCalled).to.beTruthy();
+            });
             it(@"should call dragging ended block", ^{
                 __block BOOL draggingEndedCalled = NO;
-                view.draggingEndedBlock = ^{
-                    draggingEndedCalled = YES;
+                __weak UIView * weakView = view;
+                view.draggingEndedBlock = ^(UIView * draggingView){
+                    if([draggingView isEqual:weakView]){
+                        draggingEndedCalled = YES;
+                    }
                 };
                 
                 [view simulatePanGestureWithCheckPoints:@[P(30.0, 20.0),
@@ -233,8 +253,11 @@ describe(@"draggable view", ^{
         describe(@"handle restriction", ^{
             it(@"should not start dragging if first touch is outside the handle rect", ^{
                 __block BOOL draggingStartedCalled = NO;
-                view.draggingStartedBlock = ^{
-                    draggingStartedCalled = YES;
+                __weak UIView * weakView = view;
+                view.draggingStartedBlock = ^(UIView * draggingView){
+                    if([draggingView isEqual:weakView]){
+                        draggingStartedCalled = YES;
+                    }
                 };
                 view.handle = CGRectMake(10.0, 10.0, 10.0, 30.0);
                 

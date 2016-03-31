@@ -82,24 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-UIViewDraggableDemoTests/UIView_draggable.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/Expecta.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/Expecta_Snapshots.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/FBSnapshotTestCase.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/OCHamcrest.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/OCMock.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/OCMockito.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/Specta.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-UIViewDraggableDemoTests/UIView_draggable.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/Expecta.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/Expecta_Snapshots.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/FBSnapshotTestCase.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/OCHamcrest.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/OCMock.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/OCMockito.framework"
-  install_framework "Pods-UIViewDraggableDemoTests/Specta.framework"
-fi

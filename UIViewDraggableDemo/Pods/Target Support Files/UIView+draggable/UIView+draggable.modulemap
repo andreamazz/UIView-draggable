@@ -1,6 +1,0 @@
-framework module UIView_draggable {
-  umbrella header "UIView+draggable-umbrella.h"
-
-  export *
-  module * { export * }
-}
