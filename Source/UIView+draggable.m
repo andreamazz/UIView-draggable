@@ -112,7 +112,6 @@
     }
 
     if (sender.state == UIGestureRecognizerStateEnded && self.draggingEndedBlock) {
-        self.layer.anchorPoint = CGPointMake(0.5, 0.5);
         self.draggingEndedBlock(self);
     }
 
