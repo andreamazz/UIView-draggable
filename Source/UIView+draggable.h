@@ -77,4 +77,11 @@
  */
 - (void)setDraggable:(BOOL)draggable;
 
+/** Enables the dragging
+ *
+ * Enables move view to the front
+ */
+
+-(void)setMoveableToFront:(BOOL)moveable;
+
 @end
