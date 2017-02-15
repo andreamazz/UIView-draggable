@@ -48,7 +48,7 @@
 }
 
 - (BOOL)moveable {
-    BOOL shouldMoveToFront;
+    BOOL shouldMoveToFront = true;
     return shouldMoveToFront;
 }
 
