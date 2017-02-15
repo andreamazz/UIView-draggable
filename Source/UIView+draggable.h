@@ -82,6 +82,6 @@
  * Enables move view to the front
  */
 
--(void)setMoveableToFront:(BOOL)moveable;
+-(void)setMoveable:(BOOL)moveable;
 
 @end

@@ -106,7 +106,6 @@
         return;
     }
 
-    //if moveable = true
     if ([self moveable]) {
         [self.superview bringSubviewToFront:self];
     }
