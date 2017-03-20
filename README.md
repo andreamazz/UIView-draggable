@@ -15,47 +15,47 @@ UIView category that adds dragging capabilities.
   </a>
 </p>
 
-##Screenshot
+## Screenshot
 ![UIView+draggable](https://raw.githubusercontent.com/andreamazz/UIView-draggable/master/assets/screenshot.gif)
 
-##Setup with CocoaPods
+## Setup with CocoaPods
 * Add ```pod 'UIView+draggable'``` to your Podfile
 * Run ```pod install```
 * Run ```open App.xcworkspace```
 
-##Setup with Carthage
+## Setup with Carthage
 ```
 github "andreamazz/UIView-draggable"
 ```
 
-####Objective-C
+#### Objective-C
 
 Import ```UIView+draggable.h``` in your controller's header file
 
-####Swift
+#### Swift
 
 If you are using `use_frameworks!` in your Podfile, use this import:
 ```swift
 import UIView_draggable
 ```
 
-##Usage
+## Usage
 Call `enableDragging` on a UIView instance
 
-####Objective-C
+#### Objective-C
 
 ```objc
 // Enable dragging
 [self.view enableDragging];
 ```
 
-####Swift
+#### Swift
 
 ```swift
 view.enableDragging()
 ```
 
-##Options
+## Options
 The movement area can be restricted to a given rect:
 
 ```swift
@@ -75,18 +75,18 @@ The area where the dragging action starts can be configured:
 view.handle = CGRectMake(0, 0, 20, 20)
 ```
 
-#Author
-[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me. 
+# Author
+[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me.
 
 Want to support the development of [these free libraries](https://cocoapods.org/owners/734)? Buy me a coffee ☕️ via [Paypal](https://www.paypal.me/andreamazzini).  
 
-#Contributors
-Thanks to [everyone](https://github.com/andreamazz/UIView-draggable/graphs/contributors) kind enough to submit a pull request. 
+# Contributors
+Thanks to [everyone](https://github.com/andreamazz/UIView-draggable/graphs/contributors) kind enough to submit a pull request.
 
-#MIT License
+# MIT License
 	The MIT License (MIT)
 
-	Copyright (c) 2015 Andrea Mazzini
+	Copyright (c) 2017 Andrea Mazzini
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy of
 	this software and associated documentation files (the "Software"), to deal in
