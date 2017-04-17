@@ -30,7 +30,7 @@ Reverted changes in `1.0.1`.
 
 ## [1.0.1](https://github.com/andreamazz/UIView-draggable/releases/tag/1.0.1)  
 
-###Fixed
+### Fixed
 
 - Issue #12 
 
@@ -40,6 +40,6 @@ Stable release.
 
 ## [0.6](https://github.com/andreamazz/UIView-draggable/releases/tag/0.6)  
 
-###Added  
+### Added  
 - Carthage support
 
