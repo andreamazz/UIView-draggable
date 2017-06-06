@@ -47,6 +47,12 @@
     return [handleValue CGRectValue];
 }
 
+- (BOOL)moveable {
+#pragma mark - move to front (was true)
+    BOOL shouldMoveToFront = false;
+    return shouldMoveToFront;
+}
+
 - (void)setShouldMoveAlongY:(BOOL)newShould {
     NSNumber *shouldMoveAlongYBool = [NSNumber numberWithBool:newShould];
     objc_setAssociatedObject(self, @selector(shouldMoveAlongY), shouldMoveAlongYBool, OBJC_ASSOCIATION_RETAIN );
@@ -101,8 +107,12 @@
         return;
     }
 
+    if ([self moveable]) {
+        [self.superview bringSubviewToFront:self];
+    }
+    
     [self adjustAnchorPointForGestureRecognizer:sender];
-
+    
     if (sender.state == UIGestureRecognizerStateBegan && self.draggingStartedBlock) {
         self.draggingStartedBlock(self);
     }
@@ -148,7 +158,8 @@
                             newYOrigin,
                             CGRectGetWidth(self.frame),
                             CGRectGetHeight(self.frame));
-
+    
+    
     [sender setTranslation:(CGPoint){0, 0} inView:[self superview]];
 }
 
@@ -166,6 +177,10 @@
 
 - (void)setDraggable:(BOOL)draggable {
     self.panGesture.enabled = draggable;
+}
+
+- (void)setMoveable:(BOOL)moveable {
+    self.moveable = moveable;
 }
 
 - (void)enableDragging {
