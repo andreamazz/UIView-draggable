@@ -48,7 +48,8 @@
 }
 
 - (BOOL)moveable {
-    BOOL shouldMoveToFront = true;
+#pragma mark - move to front (was true)
+    BOOL shouldMoveToFront = false;
     return shouldMoveToFront;
 }
 
