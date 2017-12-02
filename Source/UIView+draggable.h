@@ -6,7 +6,7 @@
 //  Copyright (c) 2016 Andrea Mazzini. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /**
  * @name UIView+draggable
